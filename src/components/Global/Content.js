@@ -16,12 +16,13 @@ const useStyles = makeStyles( () => ({
 		//justifyContent: 'flex-start',
 		//alignItems: 'flex-start'
 		justifyContent: 'flex-end',
-		alignItems: 'flex-end'
+		alignItems: 'flex-end',
+		boxSizing: 'border-box',
 		
 	},
 	rectanculo:{
 		background: 'white',
-		width: 'calc(100% - 20px)',
+		width: '100%',
 		height: 'calc(100% / 3)',
 		margin: '10px 0 ',
 		display: 'flex',
@@ -40,9 +41,15 @@ const Content = () => {
 	return (
 	
 		<div className={classes.content}>
-			<div className={classes.rectanculo}><p>rectanculo1</p></div>
-			<div className={classes.rectanculo}><p>rectanculo2</p></div>
-			<div className={classes.rectanculo}><p>rectanculo3</p></div>
+			<div className={classes.rectanculo}>
+				<p>rectanculo1</p>
+			</div>
+			<div className={classes.rectanculo}>
+				<p>rectanculo2</p>
+			</div>
+			<div className={classes.rectanculo}>
+				<p>rectanculo3</p>
+			</div>
 		</div>
 	
 	);	
