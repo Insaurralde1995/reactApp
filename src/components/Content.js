@@ -1,4 +1,5 @@
 import React from 'react';
+import Item from './Item';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles( () => ({
@@ -17,22 +18,7 @@ const useStyles = makeStyles( () => ({
 		//alignItems: 'flex-start'
 		justifyContent: 'flex-end',
 		alignItems: 'flex-end',
-		boxSizing: 'border-box',
-		
-	},
-	rectanculo:{
-		background: 'white',
-		width: '100%',
-		height: 'calc(100% / 3)',
-		margin: '10px 0 ',
-		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center',
-	
-		"& p": {
-			color: 'black',
-			fontSize: 30
-		}
+		boxSizing: 'border-box',	
 	}
 }));
 
@@ -42,15 +28,9 @@ const Content = () => {
 
 	return (
 		<div className={classes.content}>
-			<div className={classes.rectanculo}>
-				<p>rectanculo1</p>
-			</div>
-			<div className={classes.rectanculo}>
-				<p>rectanculo2</p>
-			</div>
-			<div className={classes.rectanculo}>
-				<p>rectanculo3</p>
-			</div>
+			<Item />
+			<Item />
+			<Item />
 		</div>
 	);
 
