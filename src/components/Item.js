@@ -17,11 +17,25 @@ const useStyles = makeStyles( () => ({
 			color: 'black',
 			fontSize: 30
 		}
-	}
+    },
+    imageClass: {
+        height: 150,
+    },
+    subTitleClass: {
+        textAlign: "center",
+        width: '100%',
+
+        "& span": {
+			color: 'pink',
+			fontSize: 20
+		}
+    }
 }));
 
 const Item = ({
-	title = 'falopa de la buena', 
+    // acá se llaman a las props. 
+    title = 'falopa de la buena', 
+    subtitles = 'default text',
 	image
 }) => {
 
@@ -31,7 +45,10 @@ const Item = ({
 	return (
 		<div className={classes.rectanculo}>
 			<p>{title}</p>
-			<img src={image || imgLogo} alt={'imgEjemplo'} />
+            <p className={classes.subTitleClass}>
+            <span>{subtitles}</span>
+            </p>
+			<img className={classes.imageClass} src={image || imgLogo} alt={'imgEjemplo'} />{/* creando un condicional con || */}
 		</div>
 	);
 
