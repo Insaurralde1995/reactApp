@@ -20,15 +20,18 @@ const useStyles = makeStyles( () => ({
 	}
 }));
 
-const Item = () => {
+const Item = ({
+	title = 'falopa de la buena', 
+	image
+}) => {
 
 	const classes = useStyles({});
 	const imgLogo = require('../assets/logo.svg');
 
 	return (
 		<div className={classes.rectanculo}>
-			<p>rectanculo1</p>
-			<img src={imgLogo} alt={'imgEjemplo'} />
+			<p>{title}</p>
+			<img src={image || imgLogo} alt={'imgEjemplo'} />
 		</div>
 	);
 
