@@ -35,11 +35,12 @@ const useStyles = makeStyles( () => ({
 		}
 	}
 }));
-	//la nueva forma de invocar a los componentes
+
 const Content = () => {
+
 	const classes = useStyles({});
+
 	return (
-	
 		<div className={classes.content}>
 			<div className={classes.rectanculo}>
 				<p>rectanculo1</p>
@@ -51,8 +52,7 @@ const Content = () => {
 				<p>rectanculo3</p>
 			</div>
 		</div>
-	
-	);	
+	);
+
 };
-		
 export default React.memo(Content);
