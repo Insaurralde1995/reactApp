@@ -5,30 +5,28 @@ const useStyles = makeStyles( () => ({
 	// aca van los styles
 
 	rectanculo:{
-		background: '#1769aa',
-		width: 'calc(100% / 3)',
-		height: '100%',
-		margin: 10,
+		background: 'white',
+		width: '100%',
+		height: 'calc(100% / 3)',
+		margin: '10px 0 ',
 		display: 'flex',
-		flexDirection: 'column',
 		justifyContent: 'center',
 		alignItems: 'center',
 	
 		"& p": {
-		color: 'white',
-		fontSize: 50
+		color: 'black',
+		fontSize: 30
 		}
 	},
-	imageClass: ({height,border}) => ({
-		height: height || 150,
-		border: border ? '1px solid red' : null,	
-	}),
+	imageClass: {
+		height: 150,
+	},
 	subTitleClass: {
 		textAlign: "center",
 		width: '100%',
 
 		"& span": {
-			color: '#CCC',
+			color: 'pink',
 			fontSize: 20
 		}
 	}
@@ -37,13 +35,11 @@ const useStyles = makeStyles( () => ({
 const Item = ({
 	// acá se llaman a las props. 
 	title = 'falopa de la buena', 
-	subtitles = 'Falopa Salvaje',
-	image,
-	height,
-	border = null
+	subtitles = 'default text',
+	image
 }) => {
 
-	const classes = useStyles({height,border});
+	const classes = useStyles({});
 	const imgLogo = require('../assets/logo.svg');
 
 	return (
@@ -62,9 +58,3 @@ const Item = ({
 
 };
 export default React.memo(Item);
-
-
-//En lugar de filas tres columnas
-//la imagen del primer item tiene que medir 300px
-//En el segundo debe medir 150px
-//en el tercero tiene que medir 50px y un borde rojo de 1px

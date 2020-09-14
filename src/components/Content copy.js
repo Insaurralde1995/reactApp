@@ -11,13 +11,13 @@ const useStyles = makeStyles( () => ({
 		width: '100%',
 		height: '100%',
 		display: 'flex',
-		flexDirection: 'row', //delimita el orden de los elementos hijos, si van a ser columnas o filas (row o column)
-		justifyContent: 'center',
-		alignItems: 'center',
+		flexDirection: 'column', //delimita el orden de los elementos hijos, si van a ser columnas o filas (row o column)
+		//justifyContent: 'center',
+		//alignItems: 'center'
 		//justifyContent: 'flex-start',
 		//alignItems: 'flex-start'
-		//justifyContent: 'flex-end',
-		//alignItems: 'flex-end',
+		justifyContent: 'flex-end',
+		alignItems: 'flex-end',
 		boxSizing: 'border-box',	
 	}
 }));
@@ -31,20 +31,14 @@ const Content = () => {
 			<Item 
 				title='Julián' 
 				image={require('../assets/facebook.svg')}
-				height={100}
 			/>
 			<Item 
 				title='Luciano' 
 				image={require('../assets/instagram.svg')}
-				height={100}
-
 			/>
 			<Item 
 				title='Marta' 
 				image={require('../assets/youtube.svg')}
-				height={100}
-				border
-
 			/>
 		</div>
 	);

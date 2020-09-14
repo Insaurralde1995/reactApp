@@ -68,3 +68,8 @@ export default React.memo(Item);
 //la imagen del primer item tiene que medir 300px
 //En el segundo debe medir 150px
 //en el tercero tiene que medir 50px y un borde rojo de 1px
+
+
+//como hacer una imagen background
+
+//si le paso una imagen con el ancho, sólo se acomoda el alto
