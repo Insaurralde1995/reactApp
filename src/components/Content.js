@@ -28,9 +28,18 @@ const Content = () => {
 
 	return (
 		<div className={classes.content}>
-			<Item title='Julián' image={require('../assets/facebook.svg')}/>
-			<Item title='Luciano' image={require('../assets/instagram.svg')}/>
-			<Item title='Marta' image={require('../assets/youtube.svg')}/>
+			<Item 
+				title='Julián' 
+				image={require('../assets/facebook.svg')}
+			/>
+			<Item 
+				title='Luciano' 
+				image={require('../assets/instagram.svg')}
+			/>
+			<Item 
+				title='Marta' 
+				image={require('../assets/youtube.svg')}
+			/>
 		</div>
 	);
 
