@@ -48,7 +48,11 @@ const Item = ({
 			<p className={classes.subTitleClass}>
 				<span>{subtitles}</span>
 			</p>
-			<img className={classes.imageClass} src={image || imgLogo} alt={'imgEjemplo'} />{/* creando un condicional con || */}
+			<img 
+				className={classes.imageClass} 
+				src={image || imgLogo} 
+				alt={'imgEjemplo'} 
+			/>{/* creando un condicional con || */}
 		</div>
 	);
 
