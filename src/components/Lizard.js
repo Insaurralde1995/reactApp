@@ -1,12 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
+const iamgeBackground = require('../assets/facebook.svg')
+
 const useStyles = makeStyles( () => ({
-    
-    
-    rectanculo:{
+	rectanculo: {
 		background: 'white',
-		backgroundImage: require('../assets/facebook.svg'),
+		backgroundImage: `url(${iamgeBackground})`,
 		width: 'calc(100% / 3)',
 		height: '100%',
 		margin: 10,
@@ -17,8 +17,8 @@ const useStyles = makeStyles( () => ({
 		borderRadius: 20,
 	
 		"& p": {
-		color: 'black',
-		fontSize: 50
+			color: 'black',
+			fontSize: 50
 		}
 	},
 	imageClass: ({height,border}) => ({
