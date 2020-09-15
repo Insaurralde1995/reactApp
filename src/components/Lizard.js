@@ -1,16 +1,16 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-const iamgeBackground = require('../assets/facebook.svg')
+const iamgeBackground = require('../assets/lagarto.jpeg')
 
 const useStyles = makeStyles( () => ({
 	rectanculo: {
 		background: 'white',
-		backgroundImage: `url(${iamgeBackground})`,
-		width: 'calc(100% / 3)',
-		height: '100%',
+		width: 450,
+		height: 500,
 		margin: 10,
 		display: 'flex',
+		overflow: 'hidden',
 		flexDirection: 'column',
 		justifyContent: 'space-between',
 		alignItems: 'space-between',
@@ -21,10 +21,13 @@ const useStyles = makeStyles( () => ({
 			fontSize: 50
 		}
 	},
-	imageClass: ({height,border}) => ({
-		height: height || 150,
-		border: border ? '1px solid red' : null,	
-	}),
+	image: {
+		backgroundImage: `url(${iamgeBackground})`,
+		backgroundSize: '100%',
+		backgroundRepeat: 'no-repeat',
+		height: 300,
+		width: '100%'
+	},
 	subTitleClass: {
 		textAlign: "center",
 		width: '100%',
@@ -49,15 +52,13 @@ const Lizard = ({
 
 	return (
 		<div className={classes.rectanculo}>
-{/* 			<img 
-				className={classes.imageClass} 
-				src={image || imgLogo} 
-				alt={'imgEjemplo'} 
-			/> */}
-			<p>{title}</p>
-			<p className={classes.subTitleClass}>
-				<span>{subtitles}</span>
-			</p>
+			<div className={classes.image} />	
+			<div className={classes.content}>		
+				<p>{title}</p>
+				<p className={classes.subTitleClass}>
+					<span>{subtitles}</span>
+				</p>
+			</div>
 			{/* creando un condicional con || */}
 		</div>
 	);
