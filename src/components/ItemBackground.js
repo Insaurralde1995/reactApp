@@ -73,3 +73,12 @@ export default React.memo(Item);
 //como hacer una imagen background
 
 //si le paso una imagen con el ancho, sólo se acomoda el alto
+
+
+
+//[17:43] Luciano Recchini
+//<div>
+//<img src=""alt=""/>
+//<h2></h2>
+//<p></p>
+//</div>

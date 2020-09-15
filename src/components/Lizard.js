@@ -2,20 +2,22 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles( () => ({
-	// aca van los styles
-
-	rectanculo:{
-		background: '#1769aa',
+    
+    
+    rectanculo:{
+		background: 'white',
+		backgroundImage: require('../assets/facebook.svg'),
 		width: 'calc(100% / 3)',
 		height: '100%',
 		margin: 10,
 		display: 'flex',
 		flexDirection: 'column',
-		justifyContent: 'center',
-		alignItems: 'center',
+		justifyContent: 'space-between',
+		alignItems: 'space-between',
+		borderRadius: 20,
 	
 		"& p": {
-		color: 'white',
+		color: 'black',
 		fontSize: 50
 		}
 	},
@@ -33,11 +35,10 @@ const useStyles = makeStyles( () => ({
 		}
 	}
 }));
-
-const Item = ({
+const Lizard = ({
 	// acá se llaman a las props. 
-	title = 'falopa de la buena', 
-	subtitles = 'Falopa Salvaje',
+	title = 'Lagarto', 
+	subtitles = 'Son lagartos',
 	image,
 	height,
 	border = null
@@ -48,29 +49,24 @@ const Item = ({
 
 	return (
 		<div className={classes.rectanculo}>
+{/* 			<img 
+				className={classes.imageClass} 
+				src={image || imgLogo} 
+				alt={'imgEjemplo'} 
+			/> */}
 			<p>{title}</p>
 			<p className={classes.subTitleClass}>
 				<span>{subtitles}</span>
 			</p>
-			<img 
-				className={classes.imageClass} 
-				src={image || imgLogo} 
-				alt={'imgEjemplo'} 
-			/>{/* creando un condicional con || */}
+			{/* creando un condicional con || */}
 		</div>
 	);
+	}
+export default React.memo(Lizard);
 
-};
-export default React.memo(Item);
 
 //<div>
 //<img src=""alt=""/>
 //<h2></h2>
 //<p></p>
 //</div>
-
-
-//En lugar de filas tres columnas
-//la imagen del primer item tiene que medir 300px
-//En el segundo debe medir 150px
-//en el tercero tiene que medir 50px y un borde rojo de 1px
