@@ -7,33 +7,35 @@ const useStyles = makeStyles( () => ({
 	rectanculo: {
 		background: 'white',
 		width: 450,
-		height: 500,
+		height: 480,
 		margin: 10,
 		display: 'flex',
 		overflow: 'hidden',
 		flexDirection: 'column',
-		justifyContent: 'space-between',
-		alignItems: 'space-between',
+		justifyContent: 'flex-start',
+		alignItems: 'flex-start',
 		borderRadius: 20,
-	
-		"& p": {
+	},
+	content: {
+		"& h2": {
 			color: 'black',
-			fontSize: 50
+			fontSize: 30,
+			margin: 0
 		}
 	},
 	image: {
 		backgroundImage: `url(${iamgeBackground})`,
 		backgroundSize: '100%',
 		backgroundRepeat: 'no-repeat',
-		height: 300,
+		height: 260,
 		width: '100%'
 	},
 	subTitleClass: {
-		textAlign: "center",
 		width: '100%',
 
-		"& span": {
+		"& p": {
 			color: '#CCC',
+			margin: 0,
 			fontSize: 20
 		}
 	}
@@ -54,7 +56,7 @@ const Lizard = ({
 		<div className={classes.rectanculo}>
 			<div className={classes.image} />	
 			<div className={classes.content}>		
-				<p>{title}</p>
+				<h2>{title}</h2>
 				<p className={classes.subTitleClass}>
 					<span>{subtitles}</span>
 				</p>

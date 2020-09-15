@@ -1,7 +1,7 @@
 import React from 'react';
 import Item from './Item';
 import { makeStyles } from '@material-ui/core/styles';
-import Lizard from './Lizard';
+import  Lizard from './Lizard';
 
 const useStyles = makeStyles( () => ({
 	// aca van los styles
@@ -33,6 +33,7 @@ const Content = () => {
 			<Lizard
 				title='Lagarto'
 				image={require('../assets/lagarto.jpeg')}
+				subtitles={'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'}
 				height={100}
 			/>
 		</div>
